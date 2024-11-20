@@ -1,0 +1,21 @@
+Построение Docker-образа:
+
+  docker build -t java-doc-generator .
+
+
+Запуск контейнера (контейнер автоматически удаляется после завершения работы):
+
+  docker run --rm -v "$PWD/mydocumentation:/app/mydocumentation" java-doc-generator
+
+
+Запуск контейнера (контейнер не удаляется автоматически после завершения работы):
+
+  docker run -v "$PWD/mydocumentation:/app/mydocumentation" java-doc-generator
+
+Просмотреть список контейнеров:
+
+  docker ps -a
+
+Просмотреть список образов:
+    
+    docker images
